@@ -1,7 +1,7 @@
 # installation
 
 First, make sure tomcat is installed.  
-Then, copy this repository file into your ```$CATALINA_HOME``` directory.
+Then, copy this repository file into your ```$CATALINA_HOME/webapps``` directory.
 
 Lanch the init.sql script into your database, and create a user named javauser with password javadude with access to the database you just created (javatest).  
 
