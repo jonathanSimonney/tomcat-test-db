@@ -1,11 +1,11 @@
 # installation
 
 First, make sure tomcat is installed.  
-Then, copy this repository file into your $CATALINA_HOME directory.
+Then, copy this repository file into your ```$CATALINA_HOME``` directory.
 
 Lanch the init.sql script into your database, and create a user named javauser with password javadude with access to the database you just created (javatest).  
 
-Finally, add a datasource in $CATALINA_BASE/conf/context.xml, looking like this : 
+Finally, add a datasource in ```$CATALINA_BASE/conf/context.xml```, looking like this : 
 
 ```xml
 <Context>
@@ -38,7 +38,11 @@ Finally, add a datasource in $CATALINA_BASE/conf/context.xml, looking like this 
   <Resource name="jdbc/TestDB" auth="Container" type="javax.sql.DataSource"
                maxTotal="100" maxIdle="30" maxWaitMillis="10000"
                username="javauser" password="javadude" driverClassName="com.mysql.jdbc.Driver"
-               url="jdbc:mysql://localhost:3306/javatest"/>
+              url="jdbc:mysql://localhost:3306/javatest?serverTimezone=UTC"/>
 
 </Context>
 ```
+
+# additional informations
+
+If you're new to tomcat, here is a [link](https://stackoverflow.com/questions/3090398/tomcat-catalina-base-and-catalina-home-variables) to explain what ```CATALINA_HOME``` and ```CATALINA_BASE``` are.
