@@ -5,7 +5,7 @@ Then, copy this repository file into your ```$CATALINA_HOME/webapps``` directory
 
 Lanch the init.sql script into your database, and create a user named javauser with password javadude with access to the database you just created (javatest).  
 
-Finally, add a datasource in ```$CATALINA_BASE/conf/context.xml```, looking like this : 
+Finally, add a datasource in ```$CATALINA_BASE/conf/context.xml```, looking like this (don't forget to change the url to match your sql host url) : 
 
 ```xml
 <Context>
